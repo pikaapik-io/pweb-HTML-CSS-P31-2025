@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+    position: relative;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    border-color: rgba(255,255,255,0.8);
+}
+
+.social-link:hover {
+    background: rgba(255,255,255,0.4);
+    transform: translateY(-2px);
+}
+
+.skill-tag:hover {
+    background: linear-gradient(135deg, #3b82f6, #a855f7);
+    transform: translateY(-1px);
+}
+
+.experience-item:hover .job-title,
+.education-item:hover .degree-title {
+    color: #60a5fa;
+}
+
+.contact-list li:first-child {
+    font-weight: bold;
+}
+
+.skill-category:nth-child(2) .skill-tag {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+}
+
+.experience-item:first-child .job-date {
+    background: linear-gradient(135deg, #059669, #10b981);
+    color: white;
+}
+
+.cv-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.cv-sidebar {
+    background: linear-gradient(135deg, #1e40af, #7c3aed);
+    padding: 2rem 1.5rem;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    margin-bottom: 1rem;
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.profile-title {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    padding-bottom: 0.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.8rem;
+    background: #ffffff;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.contact-list {
+    list-style: disc;
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.8rem;
+}
+
+.social-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.cv-main {
+    background: #2a2a2a;
+    padding: 2rem;
+    display: block;
+    position: relative;
+}
+
+.main-section {
+    margin-bottom: 2.5rem;
+    display: block;
+    position: relative;
+}
+
+.main-section h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 0.5rem;
+    display: block;
+    position: relative;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #cccccc;
+    margin-bottom: 1rem;
+    display: block;
+    position: relative;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #444444;
+    padding-bottom: 1.5rem;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.experience-item:last-of-type, .education-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.job-header, .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.job-title, .degree-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.company-name, .institution-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #a855f7;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.job-date, .edu-date {
+    font-size: 0.9rem;
+    color: #3b82f6;
+    font-weight: bold;
+    background: rgba(59, 130, 246, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.job-description {
+    color: #cccccc;
+    margin-top: 1rem;
+    display: block;
+}
+
+.job-description ul {
+    list-style: none;
+    padding-left: 0;
+    display: block;
+}
+
+.job-description li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: list-item;
+}
+
+.job-description li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+.skills-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1.5rem;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.skill-category {
+    display: block;
+    position: relative;
+}
+
+.skill-category h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #1e40af, #7c3aed);
+    color: #ffffff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .cv-sidebar {
+        padding: 1.5rem 1rem;
+        position: relative;
+        display: block;
+    }
+
+    .cv-main {
+        padding: 1.5rem 1rem;
+        display: block;
+    }
+
+    .job-header, .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+    }
+
+    .skills-section {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        display: block;
+    }
+
+    .profile-name {
+        font-size: 1.5rem;
+        display: block;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .social-link:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 480px) {
+    .cv-sidebar, .cv-main {
+        padding: 1rem 0.8rem;
+        display: block;
+        position: relative;
+    }
+
+    .main-section h2 {
+        font-size: 1.4rem;
+        display: block;
+    }
+
+    .skills-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .skill-tag:nth-child(odd) {
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    }
+}
